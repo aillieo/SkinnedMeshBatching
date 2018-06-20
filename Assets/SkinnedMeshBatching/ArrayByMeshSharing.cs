@@ -59,6 +59,8 @@ public class ArrayByMeshSharing : MonoBehaviour {
 		if (mr == null)
 		{
 			mr = instance.AddComponent<MeshRenderer>();
+			mr.receiveShadows = false;
+			mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 		}
 		mr.sharedMaterial = matForArray;
 	}
